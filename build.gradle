@@ -12,11 +12,12 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: "maven"
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'com.ywt'
+group = 'com.ywt.demo'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
@@ -30,6 +31,6 @@ dependencies {
     def springBootVersion = '2.0.1.RELEASE'
     compile('org.springframework.boot:spring-boot-starter')
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "$springBootVersion"
-
+    compile group:'com.ywt.demo',name:'projectb',version: "0.0.1-SNAPSHOT"
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
